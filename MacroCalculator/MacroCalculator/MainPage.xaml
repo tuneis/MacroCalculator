@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MacroCalculator.MainPage">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="Shared Settings" FontAttributes="Bold"/>
+            <Label Text="Weight (lbs)"/>
+            <Entry x:Name="TxtWeight" ReturnType="Done" Keyboard="Numeric"/>
+            <Label Text="Height (in)"/>
+            <Entry x:Name="TxtHeight" ReturnType="Done" Keyboard="Numeric" Text="69"/>
+            <Label Text="Age"/>
+            <Entry x:Name="TxtAge" ReturnType="Done" Keyboard="Numeric" Text="32"/>
+            <Label Text="Activity Factor"/>
+            <Entry x:Name="TxtActivityFactor" ReturnType="Done" Keyboard="Numeric" Text="1.5"/>
+
+            <BoxView WidthRequest="1"/>
+
+            <Label Text="Carb Cycling Settings" FontAttributes="Bold"/>
+            <Label Text="Daily Deficit (cal)"/>
+            <Entry x:Name="TxtDailyDeficit" ReturnType="Done" Keyboard="Numeric" Text="500"/>
+            <Button Clicked="CalculateCarbCycling_Clicked" Text="Calculate"/>
+
+            <BoxView WidthRequest="1"/>
+
+            <Label Text="Flex Dieting Settings" FontAttributes="Bold"/>
+            <Label Text="Daily Deficit (%)"/>
+            <Entry x:Name="TxtDailyDeficitPercentage" ReturnType="Done" Keyboard="Numeric" Text="20"/>
+            <Label Text="Carbohydrate (%)"/>
+            <Entry x:Name="TxtCarbohydrate" ReturnType="Done" Keyboard="Numeric" Text="50"/>
+            <Label Text="Protein (%)"/>
+            <Entry x:Name="TxtProtein" ReturnType="Done" Keyboard="Numeric" Text="25"/>
+            <Label Text="Fat (%)"/>
+            <Entry x:Name="TxtFat" ReturnType="Done"  Keyboard="Numeric" Text="25"/>
+            <Button Clicked="CalculateFlexDieting_Clicked" Text="Calculate"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
